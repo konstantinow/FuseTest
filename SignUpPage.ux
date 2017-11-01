@@ -1,0 +1,8 @@
+<Panel ux:Class="SignUpPage">
+	<StackPanel>
+		<Panel Margin="0,80,0,0">
+			<Image File="Assets/Images/logo.png" Width="50%" Alignment="Center" />
+		</Panel>
+		<Image File="Assets/Images/background.png" />
+	</StackPanel>
+</Panel>

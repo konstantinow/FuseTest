@@ -1,0 +1,9 @@
+<Rectangle ux:Class="KMButton" Color="#E56399">
+	<Shadow ux:Name="RectangleShadow" Size="10" />
+	<Text Alignment="Center" Value="{ReadProperty Text}" Color="White" Font="MontserratMedium"/>
+	<string ux:Property="Text"/>
+	<WhilePressed>
+		<Scale Factor="0.98" Duration="0.1" />
+		<!--<Change DurationBack="0.2" RectangleShadow.Size="20" />-->
+	</WhilePressed>
+</Rectangle>

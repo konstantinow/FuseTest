@@ -1,0 +1,31 @@
+<Panel ux:Class="SignInPage">
+	<StackPanel>
+		<Panel Margin="0,60,0,0">
+			<Image File="Assets/Images/logo.png" Width="60%" Alignment="Center" />
+		</Panel>
+		<StackPanel Margin="0,90,0,0" Orientation="Horizontal" Alignment="Center">
+			<Image File="Assets/Images/facebook_logo.png" Width="24" Height="24" Margin="0,0,16,0" />
+			<Text Color="White" FontSize="17" Font="MontserratMedium">Sign in with Facebook</Text>
+		</StackPanel>
+
+		<StackPanel Margin="0,20,0,0">
+			<Text Color="White" Width="10%" FontSize="12" Font="MontserratRegular">OR</Text>
+		</StackPanel>
+
+		<StackPanel Margin="15,20,15,0" Alignment="Center" Width="100%" Height="90" Color="White">
+			<KMEdit Margin="15,0,0,0" Height="44.5" PlaceholderText="E-mail"/>
+			<Rectangle Color="Silver" Height="1"/>
+			<DockPanel>
+				<KMEdit Margin="15,0,0,0" Dock="Left" Height="44.5" PlaceholderText="Password" IsPassword="true"/>
+				<Image Dock="Right" Margin="10,0,10,0" Width="20" File="Assets/Images/eye.png">
+					<Clicked>
+						<Rotate DegreesY="90" Duration="0.1"/>
+					</Clicked>
+				</Image>
+			</DockPanel>
+		</StackPanel>
+
+		<KMButton Margin="15,20,15,0" Width="100%" Height="50" Text="Sign In"/>
+	</StackPanel>
+	<Image File="Assets/Images/background.png" />
+</Panel>

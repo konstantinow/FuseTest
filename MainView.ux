@@ -1,0 +1,38 @@
+<App Background="#eee">
+
+	<iOS.StatusBarConfig Style="Light" Animation="Slide" IsVisible="True" />
+	<Android.StatusBarConfig Color="#FFFFFF00" />
+
+	<Font File="Assets/Fonts/Montserrat-Black.otf" ux:Global="MontserratBlack" />
+	<Font File="Assets/Fonts/Montserrat-Bold.otf" ux:Global="MontserratBold" />
+	<Font File="Assets/Fonts/Montserrat-ExtraBold.otf" ux:Global="MontserratExtraBold" />
+	<Font File="Assets/Fonts/Montserrat-ExtraLight.otf" ux:Global="MontserratExtraLight" />
+	<Font File="Assets/Fonts/Montserrat-Light.otf" ux:Global="MontserratLight" />
+	<Font File="Assets/Fonts/Montserrat-SemiBold.otf" ux:Global="MontserratSemiBold" />
+	<Font File="Assets/Fonts/Montserrat-Thin.otf" ux:Global="MontserratThin" />
+	<Font File="Assets/Fonts/Montserrat-Medium.otf" ux:Global="MontserratMedium" />
+	<Font File="Assets/Fonts/Montserrat-Regular.otf" ux:Global="MontserratRegular" />
+
+	<Router ux:Name="router" />
+
+	<PageControl Active="{active}">
+		<Page ux:Name="SignInPage">
+			<SignInPage/>
+		</Page>
+		<Page ux:Name="SignUpPage">
+			<SignUpPage/>
+		</Page>
+		<Page ux:Name="MainPage">
+			<MainPage/>
+		</Page>
+	</PageControl>
+
+	<JavaScript>
+	module.exports = {
+		openSignInPage: function() { router.goto("SignInPage"); },
+		openSignUpPage: function() { router.goto("SignUpPage"); },
+		openMainPage: function() { router.goto("MainPage"); }
+	};
+	</JavaScript>
+
+</App>

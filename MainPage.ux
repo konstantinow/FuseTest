@@ -1,0 +1,3 @@
+<Panel ux:Class="MainPage">
+	<Image File="Assets/Images/background.png"/>
+</Panel>

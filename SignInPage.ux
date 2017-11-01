@@ -25,7 +25,13 @@
 			</DockPanel>
 		</StackPanel>
 
-		<KMButton Margin="15,20,15,0" Width="100%" Height="50" Text="Sign In"/>
+		<KMButton Margin="15,20,15,0" Width="100%" Height="50" Text="Sign In" Clicked="{openSignUpPage}"/>
+
+		<Text Margin="0,5,0,0"  Color="White" FontSize="13" Font="MontserratMedium" Alignment="Center">Forgot your password?</Text>
+		<StackPanel Orientation="Horizontal" Alignment="Center" Dock="Bottom">
+			<Text Color="White" FontSize="15" Font="MontserratMedium">Don't have an account?</Text>
+			<Text Color="White" FontSize="15" Font="MontserratSemiBold"> Sign up</Text>
+		</StackPanel>
 	</StackPanel>
 	<Image File="Assets/Images/background.png" />
 </Panel>

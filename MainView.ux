@@ -17,13 +17,13 @@
 
 	<PageControl Active="{active}">
 		<Page ux:Name="SignInPage">
-			<SignUpPage />
+			<SignInPage/>
 		</Page>
 		<Page ux:Name="SignUpPage">
-			<SignInPage />
+			<SignUpPage/>
 		</Page>
 		<Page ux:Name="MainPage">
-			<MainPage />
+			<MainPage/>
 		</Page>
 	</PageControl>
 

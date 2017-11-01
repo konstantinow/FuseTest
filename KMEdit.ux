@@ -1,1 +1,1 @@
-<TextInput ux:Class="KMEdit" FontSize="18" Font="MontserratLight" TextColor="#3D3E4E" PlaceholderColor="#B2B2B9"/>
+<TextInput ux:Class="KMEdit" FontSize="15" Font="MontserratLight" TextColor="#3D3E4E" PlaceholderColor="#B2B2B9"/>

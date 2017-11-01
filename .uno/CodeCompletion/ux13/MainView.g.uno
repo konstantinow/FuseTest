@@ -1,6 +1,7 @@
 [Uno.Compiler.UxGenerated]
 public partial class MainView: Fuse.App
 {
+    global::Uno.UX.Property<Fuse.Visual> temp_Active_inst;
     [global::Uno.UX.UXGlobalResource("MontserratBlack")] public static readonly Fuse.Font MontserratBlack;
     [global::Uno.UX.UXGlobalResource("MontserratBold")] public static readonly Fuse.Font MontserratBold;
     [global::Uno.UX.UXGlobalResource("MontserratExtraBold")] public static readonly Fuse.Font MontserratExtraBold;
@@ -10,6 +11,17 @@ public partial class MainView: Fuse.App
     [global::Uno.UX.UXGlobalResource("MontserratThin")] public static readonly Fuse.Font MontserratThin;
     [global::Uno.UX.UXGlobalResource("MontserratMedium")] public static readonly Fuse.Font MontserratMedium;
     [global::Uno.UX.UXGlobalResource("MontserratRegular")] public static readonly Fuse.Font MontserratRegular;
+    internal global::Fuse.Navigation.Router router;
+    internal global::Fuse.Controls.Page SignInPage;
+    internal global::Fuse.Controls.Page SignUpPage;
+    internal global::Fuse.Controls.Page MainPage;
+    global::Uno.UX.NameTable __g_nametable;
+    static string[] __g_static_nametable = new string[] {
+        "router",
+        "SignInPage",
+        "SignUpPage",
+        "MainPage"
+    };
     static MainView()
     {
         global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Animations.Easing.Linear, "Linear");
@@ -154,84 +166,71 @@ public partial class MainView: Fuse.App
     }
     void InitializeUX()
     {
-        var temp = new global::Fuse.Reactive.FuseJS.DiagnosticsImplModule();
-        var temp1 = new global::Fuse.Reactive.FuseJS.Http();
-        var temp2 = new global::Fuse.Reactive.FuseJS.TimerModule();
-        var temp3 = new global::Fuse.Drawing.BrushConverter();
-        var temp4 = new global::Fuse.Triggers.BusyTaskModule();
-        var temp5 = new global::Fuse.Testing.UnoTestingHelper();
-        var temp6 = new global::Fuse.FileSystem.FileSystemModule();
-        var temp7 = new global::Fuse.Storage.StorageModule();
-        var temp8 = new global::Fuse.WebSocket.WebSocketClientModule();
-        var temp9 = new global::Polyfills.Window.WindowModule();
-        var temp10 = new global::FuseJS.Globals();
-        var temp11 = new global::FuseJS.Lifecycle();
-        var temp12 = new global::FuseJS.Environment();
-        var temp13 = new global::FuseJS.Base64();
-        var temp14 = new global::FuseJS.Bundle();
-        var temp15 = new global::FuseJS.FileReaderImpl();
-        var temp16 = new global::FuseJS.UserEvents();
-        var temp17 = new global::Fuse.iOS.StatusBarConfig();
-        var temp18 = new global::Fuse.Android.StatusBarConfig();
-        var temp19 = new global::Fuse.Controls.Panel();
-        var temp20 = new global::Fuse.Controls.StackPanel();
-        var temp21 = new global::Fuse.Controls.Panel();
-        var temp22 = new global::Fuse.Controls.Image();
-        var temp23 = new global::Fuse.Controls.StackPanel();
-        var temp24 = new global::Fuse.Controls.Image();
-        var temp25 = new global::Fuse.Controls.Text();
-        var temp26 = new global::Fuse.Controls.Panel();
-        var temp27 = new global::Fuse.Controls.Rectangle();
-        var temp28 = new global::Fuse.Controls.Text();
-        var temp29 = new global::Fuse.Controls.Rectangle();
-        var temp30 = new global::Fuse.Controls.Image();
+        var temp1 = new global::Fuse.Reactive.FuseJS.DiagnosticsImplModule();
+        var temp2 = new global::Fuse.Reactive.FuseJS.Http();
+        var temp3 = new global::Fuse.Reactive.FuseJS.TimerModule();
+        var temp4 = new global::Fuse.Drawing.BrushConverter();
+        var temp5 = new global::Fuse.Triggers.BusyTaskModule();
+        var temp6 = new global::Fuse.Testing.UnoTestingHelper();
+        var temp7 = new global::Fuse.FileSystem.FileSystemModule();
+        var temp8 = new global::Fuse.Storage.StorageModule();
+        var temp9 = new global::Fuse.WebSocket.WebSocketClientModule();
+        var temp10 = new global::Polyfills.Window.WindowModule();
+        var temp11 = new global::FuseJS.Globals();
+        var temp12 = new global::FuseJS.Lifecycle();
+        var temp13 = new global::FuseJS.Environment();
+        var temp14 = new global::FuseJS.Base64();
+        var temp15 = new global::FuseJS.Bundle();
+        var temp16 = new global::FuseJS.FileReaderImpl();
+        var temp17 = new global::FuseJS.UserEvents();
+        var temp = new global::Fuse.Controls.PageControl();
+        temp_Active_inst = new FuseSample_FuseControlsNavigationControl_Active_Property(temp, __selector0);
+        var temp18 = new global::Fuse.Reactive.Data("active");
+        __g_nametable = new global::Uno.UX.NameTable(null, __g_static_nametable);
+        var temp19 = new global::Fuse.iOS.StatusBarConfig();
+        var temp20 = new global::Fuse.Android.StatusBarConfig();
+        router = new global::Fuse.Navigation.Router();
+        SignInPage = new global::Fuse.Controls.Page();
+        var temp21 = new global::SignInPage();
+        SignUpPage = new global::Fuse.Controls.Page();
+        var temp22 = new global::SignUpPage();
+        MainPage = new global::Fuse.Controls.Page();
+        var temp23 = new global::MainPage();
+        var temp24 = new global::Fuse.Reactive.DataBinding(temp_Active_inst, temp18, Fuse.Reactive.BindingMode.Default);
+        var temp25 = new global::Fuse.Reactive.JavaScript(__g_nametable);
         this.Background = float4(0.9333333f, 0.9333333f, 0.9333333f, 1f);
-        temp17.IsVisible = true;
-        temp17.Style = Fuse.Platform.StatusBarStyle.Light;
-        temp17.Animation = Fuse.Platform.StatusBarAnimation.Slide;
-        temp18.Color = float4(1f, 1f, 1f, 0f);
-        temp19.Children.Add(temp20);
-        temp19.Children.Add(temp30);
-        temp20.Children.Add(temp21);
-        temp20.Children.Add(temp23);
-        temp20.Children.Add(temp26);
-        temp21.Margin = float4(0f, 80f, 0f, 0f);
-        temp21.Children.Add(temp22);
-        temp22.Width = new Uno.UX.Size(50f, Uno.UX.Unit.Percent);
-        temp22.Alignment = Fuse.Elements.Alignment.Center;
-        temp22.File = new global::Uno.UX.BundleFileSource(import("../../../Assets/Images/logo.png"));
-        temp23.Orientation = Fuse.Layouts.Orientation.Horizontal;
-        temp23.Alignment = Fuse.Elements.Alignment.Center;
-        temp23.Margin = float4(0f, 80f, 0f, 0f);
-        temp23.Children.Add(temp24);
-        temp23.Children.Add(temp25);
-        temp24.Width = new Uno.UX.Size(24f, Uno.UX.Unit.Unspecified);
-        temp24.Height = new Uno.UX.Size(24f, Uno.UX.Unit.Unspecified);
-        temp24.Margin = float4(0f, 0f, 16f, 0f);
-        temp24.File = new global::Uno.UX.BundleFileSource(import("../../../Assets/Images/facebook_logo.png"));
-        temp25.Value = "Sign in with Facebook";
-        temp25.FontSize = 20f;
-        temp25.Color = Fuse.Drawing.Colors.White;
-        temp25.Font = global::MainView.MontserratMedium;
-        temp26.Alignment = Fuse.Elements.Alignment.Center;
-        temp26.Margin = float4(0f, 20f, 0f, 0f);
-        temp26.Children.Add(temp27);
-        temp26.Children.Add(temp28);
-        temp26.Children.Add(temp29);
-        temp27.Color = Fuse.Drawing.Colors.White;
-        temp27.Width = new Uno.UX.Size(1f, Uno.UX.Unit.Unspecified);
-        temp27.Height = new Uno.UX.Size(1f, Uno.UX.Unit.Unspecified);
-        temp28.Value = "OR";
-        temp28.FontSize = 20f;
-        temp28.Color = Fuse.Drawing.Colors.White;
-        temp28.Width = new Uno.UX.Size(10f, Uno.UX.Unit.Percent);
-        temp28.Font = global::MainView.MontserratRegular;
-        temp29.Color = Fuse.Drawing.Colors.White;
-        temp29.Width = new Uno.UX.Size(40f, Uno.UX.Unit.Percent);
-        temp29.Height = new Uno.UX.Size(1f, Uno.UX.Unit.Unspecified);
-        temp30.File = new global::Uno.UX.BundleFileSource(import("../../../Assets/Images/background.png"));
-        this.Children.Add(temp17);
-        this.Children.Add(temp18);
+        temp19.IsVisible = true;
+        temp19.Style = Fuse.Platform.StatusBarStyle.Light;
+        temp19.Animation = Fuse.Platform.StatusBarAnimation.Slide;
+        temp20.Color = float4(1f, 1f, 1f, 0f);
+        router.Name = __selector1;
+        temp.Children.Add(SignInPage);
+        temp.Children.Add(SignUpPage);
+        temp.Children.Add(MainPage);
+        temp.Bindings.Add(temp24);
+        SignInPage.Name = __selector2;
+        SignInPage.Children.Add(temp21);
+        SignUpPage.Name = __selector3;
+        SignUpPage.Children.Add(temp22);
+        MainPage.Name = __selector4;
+        MainPage.Children.Add(temp23);
+        temp25.Code = "\n\tmodule.exports = {\n\t\topenSignInPage: function() { router.goto(\"SignInPage\"); },\n\t\topenSignUpPage: function() { router.goto(\"SignUpPage\"); },\n\t\topenMainPage: function() { router.goto(\"MainPage\"); }\n\t};\n\t";
+        temp25.LineNumber = 30;
+        temp25.FileName = "MainView.ux";
+        __g_nametable.This = this;
+        __g_nametable.Objects.Add(router);
+        __g_nametable.Objects.Add(SignInPage);
+        __g_nametable.Objects.Add(SignUpPage);
+        __g_nametable.Objects.Add(MainPage);
         this.Children.Add(temp19);
+        this.Children.Add(temp20);
+        this.Children.Add(router);
+        this.Children.Add(temp);
+        this.Children.Add(temp25);
     }
+    static global::Uno.UX.Selector __selector0 = "Active";
+    static global::Uno.UX.Selector __selector1 = "router";
+    static global::Uno.UX.Selector __selector2 = "SignInPage";
+    static global::Uno.UX.Selector __selector3 = "SignUpPage";
+    static global::Uno.UX.Selector __selector4 = "MainPage";
 }

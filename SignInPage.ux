@@ -13,25 +13,45 @@
 		</StackPanel>
 
 		<StackPanel Margin="15,20,15,0" Alignment="Center" Width="100%" Height="90" Color="White">
-			<KMEdit Margin="15,0,0,0" Height="44.5" PlaceholderText="E-mail"/>
-			<Rectangle Color="Silver" Height="1"/>
+			<KMEdit Margin="15,0,0,0" Height="44.5" PlaceholderText="E-mail" InputHint="Email" />
+			<Rectangle Color="Silver" Height="1" />
 			<DockPanel>
-				<KMEdit Margin="15,0,0,0" Dock="Left" Height="44.5" PlaceholderText="Password" IsPassword="true"/>
-				<Image Dock="Right" Margin="10,0,10,0" Width="20" File="Assets/Images/eye.png">
+				<KMEdit Margin="15,0,0,0" Dock="Left" Width="80%" Height="44.5" PlaceholderText="Password" IsPassword="{isTextPassword}" />
+				<Image ux:Name="passImage" Dock="Right" Margin="10,0,10,0" Width="20" File="{passImageFile}" Clicked="{showPass}">
 					<Clicked>
-						<Rotate DegreesY="90" Duration="0.1"/>
+						<Rotate DegreesY="90" Duration="0.1" />
 					</Clicked>
 				</Image>
 			</DockPanel>
 		</StackPanel>
 
-		<KMButton Margin="15,20,15,0" Width="100%" Height="50" Text="Sign In" Clicked="{openSignUpPage}"/>
+		<KMButton Margin="15,20,15,0" Width="100%" Height="50" Text="Sign In"/>
 
-		<Text Margin="0,5,0,0"  Color="White" FontSize="13" Font="MontserratMedium" Alignment="Center">Forgot your password?</Text>
-		<StackPanel Orientation="Horizontal" Alignment="Center" Dock="Bottom">
-			<Text Color="White" FontSize="15" Font="MontserratMedium">Don't have an account?</Text>
-			<Text Color="White" FontSize="15" Font="MontserratSemiBold"> Sign up</Text>
+		<Text Margin="0,5,0,0" Color="White" FontSize="13" Font="MontserratMedium" Alignment="Center">Forgot your password?</Text>
+		<StackPanel Margin="0,15,0,0" Orientation="Horizontal" Alignment="Center" Dock="Bottom">
+			<Text Color="White" FontSize="15" Font="MontserratMedium" Clicked="{openSignUpPage}" >Don't have an account?</Text>
+			<Text Color="White" FontSize="15" Font="MontserratSemiBold" Clicked="{openSignUpPage}" > Sign up</Text>
 		</StackPanel>
 	</StackPanel>
 	<Image File="Assets/Images/background.png" />
+	<JavaScript>
+	var Observable = require('FuseJS/Observable');
+	var isTextPassword = Observable(true);
+	var passImageFile = Observable('Assets/Images/eye_show.png')
+
+	function showPass(){
+		isTextPassword.value = !IsPassword.value;
+		if (isTextPassword.value) {
+			passImageFile.value = 'Assets/Images/eye.png'
+		} else {
+			passImageFile.value = 'Assets/Images/eye_show.png'
+		}
+	}
+
+	module.exports = {
+		isTextPassword: isTextPassword,
+		showPass: showPass,
+		passImageFile: passImageFile
+	}
+	</JavaScript>
 </Panel>

@@ -15,23 +15,47 @@
 
 	<Router ux:Name="router" />
 
-	<PageControl Active="{active}">
-		<Page ux:Name="SignInPage">
-			<SignInPage/>
-		</Page>
-		<Page ux:Name="SignUpPage">
-			<SignUpPage/>
-		</Page>
-		<Page ux:Name="MainPage">
-			<MainPage/>
-		</Page>
-	</PageControl>
+	<Navigator DefaultPath="SignIn">
+		<SignInPage ux:Template="SignIn" router="router" Transition="None">
+			<EnteringAnimation>
+				<Move X="-1" RelativeTo="Size" Duration="0.3"/>
+			</EnteringAnimation>
+			<ExitingAnimation>
+				<Move X="-1" RelativeTo="Size" Duration="0.3"/>
+			</ExitingAnimation>
+			<RemovingAnimation>
+				<Move X="-1" RelativeTo="Size" Duration="0.3"/>
+			</RemovingAnimation>
+		</SignInPage>
+		<SignUpPage ux:Template="SignUp" router="router" Transition="None">
+			<EnteringAnimation>
+				<Move X="1" RelativeTo="Size" Duration="0.3"/>
+			</EnteringAnimation>
+			<ExitingAnimation>
+				<Move X="-1" RelativeTo="Size" Duration="0.3"/>
+			</ExitingAnimation>
+			<RemovingAnimation>
+				<Move X="-1" RelativeTo="Size" Duration="0.3"/>
+			</RemovingAnimation>
+		</SignUpPage>
+		<MainPage ux:Template="Main" router="router" Transition="None">
+			<EnteringAnimation>
+				<Move X="1" RelativeTo="Size" Duration="0.3"/>
+			</EnteringAnimation>
+			<ExitingAnimation>
+				<Move X="-1" RelativeTo="Size" Duration="0.3"/>
+			</ExitingAnimation>
+			<RemovingAnimation>
+				<Move X="1" RelativeTo="Size" Duration="0.3"/>
+			</RemovingAnimation>
+		</MainPage>
+	</Navigator>
 
 	<JavaScript>
 	module.exports = {
-		openSignInPage: function() { router.goto("SignInPage"); },
-		openSignUpPage: function() { router.goto("SignUpPage"); },
-		openMainPage: function() { router.goto("MainPage"); }
+		openSignInPage: function() { router.goBack(); },
+		openSignUpPage: function() { router.push("SignUp"); },
+		openMainPage: function() { router.goto("Main"); }
 	};
 	</JavaScript>
 

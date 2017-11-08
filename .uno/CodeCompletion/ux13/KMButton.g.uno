@@ -37,6 +37,7 @@ public partial class KMButton: Fuse.Controls.Rectangle
         var temp4 = new global::Fuse.Gestures.WhilePressed();
         var temp5 = new global::Fuse.Animations.Scale();
         this.Color = float4(0.8980392f, 0.3882353f, 0.6f, 1f);
+        this.IsEnabled = true;
         RectangleShadow.Size = 10f;
         RectangleShadow.Name = __selector1;
         temp.Color = Fuse.Drawing.Colors.White;

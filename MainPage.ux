@@ -1,3 +1,8 @@
-<Panel ux:Class="MainPage">
-	<Image File="Assets/Images/background.png"/>
-</Panel>
+<Page ux:Class="MainPage">
+	<Router ux:Dependency="router" />
+
+	<Panel>
+
+		<Image File="Assets/Images/background.png"/>
+	</Panel>
+</Page>

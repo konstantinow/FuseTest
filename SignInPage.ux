@@ -1,4 +1,5 @@
 <Panel ux:Class="SignInPage">
+	<JavaScript File="SignInPage.js" />
 	<StackPanel>
 		<Panel Margin="0,60,0,0">
 			<Image File="Assets/Images/logo.png" Width="60%" Alignment="Center" />
@@ -25,7 +26,7 @@
 			</DockPanel>
 		</StackPanel>
 
-		<KMButton Margin="15,20,15,0" Width="100%" Height="50" Text="Sign In"/>
+		<KMButton Clicked="{signIn}" Margin="15,20,15,0" Width="100%" Height="50" Text="Sign In"/>
 
 		<Text Margin="0,5,0,0" Color="White" FontSize="13" Font="MontserratMedium" Alignment="Center">Forgot your password?</Text>
 		<StackPanel Margin="0,15,0,0" Orientation="Horizontal" Alignment="Center" Dock="Bottom">
@@ -34,24 +35,5 @@
 		</StackPanel>
 	</StackPanel>
 	<Image File="Assets/Images/background.png" />
-	<JavaScript>
-	var Observable = require('FuseJS/Observable');
-	var isTextPassword = Observable(true);
-	var passImageFile = Observable('Assets/Images/eye_show.png')
 
-	function showPass(){
-		isTextPassword.value = !IsPassword.value;
-		if (isTextPassword.value) {
-			passImageFile.value = 'Assets/Images/eye.png'
-		} else {
-			passImageFile.value = 'Assets/Images/eye_show.png'
-		}
-	}
-
-	module.exports = {
-		isTextPassword: isTextPassword,
-		showPass: showPass,
-		passImageFile: passImageFile
-	}
-	</JavaScript>
 </Panel>

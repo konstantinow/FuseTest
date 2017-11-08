@@ -1,7 +1,7 @@
 <Page ux:Class="SignUpPage">
 	<Router ux:Dependency="router" />
-	
 	<Panel>
+		<JavaScript File="SignUpPage.js" />
 		<StackPanel>
 			<Panel Margin="0,60,0,0">
 				<Circle Width="30" Height="30" Margin="110,110,0,0">
@@ -11,7 +11,6 @@
 					<ImageFill File="assets/images/no_avatar_circle.png" />
 				</Circle>
 			</Panel>
-
 
 			<StackPanel Margin="15,50,15,0" Alignment="Center" Width="100%" Height="100%" Color="White">
 				<KMEdit Margin="15,0,0,0" Height="44.5" PlaceholderText="Username"/>
@@ -37,7 +36,7 @@
 				</DockPanel>
 			</StackPanel>
 
-			<KMButton Margin="15,40,15,0" Width="100%" Height="50" Text="Sign Up" Clicked="{openMainPage}"/>
+			<KMButton Margin="15,40,15,0" Width="100%" Height="50" Text="Sign Up" Clicked="{signUpClick}"/>
 			<StackPanel Margin="0,30,0,0" Alignment="Center" Orientation="Horizontal">
 				<Text Color="White"  Width="100%" FontSize="15" Font="MontserratRegular" Clicked="{openSignInPage}">
 					Already have an account?

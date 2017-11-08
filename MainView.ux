@@ -15,7 +15,7 @@
 
 	<Router ux:Name="router" />
 
-	<Navigator DefaultPath="SignIn">
+	<Navigator DefaultPath="SignUp">
 		<SignInPage ux:Template="SignIn" router="router" Transition="None">
 			<EnteringAnimation>
 				<Move X="-1" RelativeTo="Size" Duration="0.3"/>

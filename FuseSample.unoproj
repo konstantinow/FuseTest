@@ -2,7 +2,7 @@
   "RootNamespace": "",
   "Packages": [
     "Fuse",
-    "FuseJS",
+    "FuseJS"
   ],
   "Includes": [
     "./*.ux",
@@ -10,7 +10,7 @@
     "./*.uxl"
   ],
   "Projects": [
-    "fuse_modules/bolav/fuse-usersettings/usersettings_include.unoproj"
+    "fuse_modules\\bolav\\fuse-usersettings\\usersettings_include.unoproj"
   ],
   "Excludes": [
     "fuse_modules/"
@@ -19,6 +19,5 @@
     "Dependencies": [
       "https://github.com/bolav/fuse-usersettings"
     ]
-  },
-  "Version": "0.0.0"
+  }
 }

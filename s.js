@@ -20,10 +20,10 @@ function signIn(login, password, isFB, callback) {
 		return response.json()
 	}).then(function(jsonObj) {
 		jsonObj['cookie'] = cookie
-		callback(jsonObj)
+		callback(null, jsonObj)
 	}).catch(function(err) {
 		console.log("error: " + err)
-		callback(err)
+		callback(err, null)
 	})
 }
 

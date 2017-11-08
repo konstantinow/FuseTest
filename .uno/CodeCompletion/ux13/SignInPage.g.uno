@@ -34,7 +34,7 @@ public partial class SignInPage: Fuse.Controls.Page
     {
         __g_nametable = new global::Uno.UX.NameTable(null, __g_static_nametable);
         var temp = new global::Fuse.Reactive.Data("showPass");
-        var temp1 = new global::Fuse.Reactive.Data("openMainPage");
+        var temp1 = new global::Fuse.Reactive.Data("signInClick");
         var temp2 = new global::Fuse.Reactive.Data("openMainPage");
         var temp3 = new global::Fuse.Reactive.Data("openSignUpPage");
         var temp4 = new global::Fuse.Reactive.Data("openSignUpPage");
@@ -69,11 +69,9 @@ public partial class SignInPage: Fuse.Controls.Page
         var temp27 = new global::Fuse.Controls.Text();
         temp_eb4 = new global::Fuse.Reactive.EventBinding(temp4);
         var temp28 = new global::Fuse.Controls.Image();
-        var temp29 = new global::Fuse.Reactive.JavaScript(__g_nametable);
         temp5.Children.Add(temp6);
         temp5.Children.Add(temp7);
         temp5.Children.Add(temp28);
-        temp5.Children.Add(temp29);
         temp6.LineNumber = 4;
         temp6.FileName = "SignInPage.ux";
         temp6.File = new global::Uno.UX.BundleFileSource(import("../../../SignInPage.js"));
@@ -179,9 +177,6 @@ public partial class SignInPage: Fuse.Controls.Page
         temp27.Font = global::MainView.MontserratSemiBold;
         temp27.Bindings.Add(temp_eb4);
         temp28.File = new global::Uno.UX.BundleFileSource(import("../../../Assets/Images/background.png"));
-        temp29.Code = "\n\t\tvar Observable = require('FuseJS/Observable');\n\t\tvar isTextPassword = Observable(true);\n\n\t\tfunction showPass(){\n\t\t\tisTextPassword.value = !IsPassword.value;\n\t\t\tif (isTextPassword.value) {\n\t\t\t\tpassImageFile = 'Assets/Images/eye.png'\n\t\t\t} else {\n\t\t\t\tpassImageFile = 'Assets/Images/eye_show.png'\n\t\t\t}\n\t\t}\n\n\t\tmodule.exports = {\n\t\t\tisTextPassword: isTextPassword,\n\t\t\tshowPass: showPass,\n\t\t\tpassImageFile: passImageFile\n\t\t}\n\t\t";
-        temp29.LineNumber = 44;
-        temp29.FileName = "SignInPage.ux";
         __g_nametable.This = this;
         __g_nametable.Objects.Add(router);
         __g_nametable.Objects.Add(password);

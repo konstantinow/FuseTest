@@ -1,4 +1,4 @@
-<Rectangle ux:Class="KMButton" Color="#E56399">
+<Rectangle ux:Class="KMButton" Color="#E56399" IsEnabled="true">
 	<Shadow ux:Name="RectangleShadow" Size="10" />
 	<Text Alignment="Center" Value="{ReadProperty Text}" Color="White" Font="MontserratMedium"/>
 	<string ux:Property="Text"/>

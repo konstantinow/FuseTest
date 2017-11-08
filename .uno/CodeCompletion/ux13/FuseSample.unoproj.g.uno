@@ -25,3 +25,19 @@ sealed class FuseSample_FuseControlsNavigationControl_Active_Property: Uno.UX.Pr
     public override Fuse.Visual Get(global::Uno.UX.PropertyObject obj) { return ((Fuse.Controls.NavigationControl)obj).Active; }
     public override void Set(global::Uno.UX.PropertyObject obj, Fuse.Visual v, global::Uno.UX.IPropertyListener origin) { ((Fuse.Controls.NavigationControl)obj).Active = v; }
 }
+sealed class FuseSample_FuseControlsTextInput_IsPassword_Property: Uno.UX.Property<bool>
+{
+    [Uno.WeakReference] readonly Fuse.Controls.TextInput _obj;
+    public FuseSample_FuseControlsTextInput_IsPassword_Property(Fuse.Controls.TextInput obj, global::Uno.UX.Selector name) : base(name) { _obj = obj; }
+    public override global::Uno.UX.PropertyObject Object { get { return _obj; } }
+    public override bool Get(global::Uno.UX.PropertyObject obj) { return ((Fuse.Controls.TextInput)obj).IsPassword; }
+    public override void Set(global::Uno.UX.PropertyObject obj, bool v, global::Uno.UX.IPropertyListener origin) { ((Fuse.Controls.TextInput)obj).IsPassword = v; }
+}
+sealed class FuseSample_FuseControlsImage_File_Property: Uno.UX.Property<Uno.UX.FileSource>
+{
+    [Uno.WeakReference] readonly Fuse.Controls.Image _obj;
+    public FuseSample_FuseControlsImage_File_Property(Fuse.Controls.Image obj, global::Uno.UX.Selector name) : base(name) { _obj = obj; }
+    public override global::Uno.UX.PropertyObject Object { get { return _obj; } }
+    public override Uno.UX.FileSource Get(global::Uno.UX.PropertyObject obj) { return ((Fuse.Controls.Image)obj).File; }
+    public override void Set(global::Uno.UX.PropertyObject obj, Uno.UX.FileSource v, global::Uno.UX.IPropertyListener origin) { ((Fuse.Controls.Image)obj).File = v; }
+}

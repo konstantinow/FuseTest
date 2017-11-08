@@ -183,7 +183,7 @@ public partial class MainView: Fuse.App
         var temp15 = new global::FuseJS.Bundle();
         var temp16 = new global::FuseJS.FileReaderImpl();
         var temp17 = new global::FuseJS.UserEvents();
-        var temp = new global::Fuse.Controls.PageControl();
+        var temp = new global::Fuse.Controls.Navigator();
         temp_Active_inst = new FuseSample_FuseControlsNavigationControl_Active_Property(temp, __selector0);
         var temp18 = new global::Fuse.Reactive.Data("active");
         __g_nametable = new global::Uno.UX.NameTable(null, __g_static_nametable);

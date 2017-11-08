@@ -1,7 +1,135 @@
 [Uno.Compiler.UxGenerated]
 public partial class MainView: Fuse.App
 {
-    global::Uno.UX.Property<Fuse.Visual> temp_Active_inst;
+    [Uno.Compiler.UxGenerated]
+    public partial class Template: Uno.UX.Template
+    {
+        [Uno.WeakReference] internal readonly MainView __parent;
+        [Uno.WeakReference] internal readonly MainView __parentInstance;
+        public Template(MainView parent, MainView parentInstance): base("SignIn", false)
+        {
+            __parent = parent;
+            __parentInstance = parentInstance;
+        }
+        static Template()
+        {
+        }
+        public override object New()
+        {
+            var __self = new global::SignInPage(__parent.router);
+            var temp = new global::Fuse.Navigation.EnteringAnimation();
+            var temp1 = new global::Fuse.Animations.Move();
+            var temp2 = new global::Fuse.Navigation.ExitingAnimation();
+            var temp3 = new global::Fuse.Animations.Move();
+            var temp4 = new global::Fuse.Triggers.RemovingAnimation();
+            var temp5 = new global::Fuse.Animations.Move();
+            __self.Name = __selector0;
+            global::Fuse.Controls.NavigationControl.SetTransition(__self, Fuse.Controls.NavigationControlTransition.None);
+            temp.Animators.Add(temp1);
+            temp1.X = -1f;
+            temp1.Duration = 0.3;
+            temp1.RelativeTo = Fuse.TranslationModes.Size;
+            temp2.Animators.Add(temp3);
+            temp3.X = -1f;
+            temp3.Duration = 0.3;
+            temp3.RelativeTo = Fuse.TranslationModes.Size;
+            temp4.Animators.Add(temp5);
+            temp5.X = -1f;
+            temp5.Duration = 0.3;
+            temp5.RelativeTo = Fuse.TranslationModes.Size;
+            __self.Children.Add(temp);
+            __self.Children.Add(temp2);
+            __self.Children.Add(temp4);
+            return __self;
+        }
+        static global::Uno.UX.Selector __selector0 = "SignIn";
+    }
+    [Uno.Compiler.UxGenerated]
+    public partial class Template1: Uno.UX.Template
+    {
+        [Uno.WeakReference] internal readonly MainView __parent;
+        [Uno.WeakReference] internal readonly MainView __parentInstance;
+        public Template1(MainView parent, MainView parentInstance): base("SignUp", false)
+        {
+            __parent = parent;
+            __parentInstance = parentInstance;
+        }
+        static Template1()
+        {
+        }
+        public override object New()
+        {
+            var __self = new global::SignUpPage(__parent.router);
+            var temp = new global::Fuse.Navigation.EnteringAnimation();
+            var temp1 = new global::Fuse.Animations.Move();
+            var temp2 = new global::Fuse.Navigation.ExitingAnimation();
+            var temp3 = new global::Fuse.Animations.Move();
+            var temp4 = new global::Fuse.Triggers.RemovingAnimation();
+            var temp5 = new global::Fuse.Animations.Move();
+            __self.Name = __selector0;
+            global::Fuse.Controls.NavigationControl.SetTransition(__self, Fuse.Controls.NavigationControlTransition.None);
+            temp.Animators.Add(temp1);
+            temp1.X = 1f;
+            temp1.Duration = 0.3;
+            temp1.RelativeTo = Fuse.TranslationModes.Size;
+            temp2.Animators.Add(temp3);
+            temp3.X = -1f;
+            temp3.Duration = 0.3;
+            temp3.RelativeTo = Fuse.TranslationModes.Size;
+            temp4.Animators.Add(temp5);
+            temp5.X = -1f;
+            temp5.Duration = 0.3;
+            temp5.RelativeTo = Fuse.TranslationModes.Size;
+            __self.Children.Add(temp);
+            __self.Children.Add(temp2);
+            __self.Children.Add(temp4);
+            return __self;
+        }
+        static global::Uno.UX.Selector __selector0 = "SignUp";
+    }
+    [Uno.Compiler.UxGenerated]
+    public partial class Template2: Uno.UX.Template
+    {
+        [Uno.WeakReference] internal readonly MainView __parent;
+        [Uno.WeakReference] internal readonly MainView __parentInstance;
+        public Template2(MainView parent, MainView parentInstance): base("Main", false)
+        {
+            __parent = parent;
+            __parentInstance = parentInstance;
+        }
+        static Template2()
+        {
+        }
+        public override object New()
+        {
+            var __self = new global::MainPage(__parent.router);
+            var temp = new global::Fuse.Navigation.EnteringAnimation();
+            var temp1 = new global::Fuse.Animations.Move();
+            var temp2 = new global::Fuse.Navigation.ExitingAnimation();
+            var temp3 = new global::Fuse.Animations.Move();
+            var temp4 = new global::Fuse.Triggers.RemovingAnimation();
+            var temp5 = new global::Fuse.Animations.Move();
+            __self.Name = __selector0;
+            global::Fuse.Controls.NavigationControl.SetTransition(__self, Fuse.Controls.NavigationControlTransition.None);
+            temp.Animators.Add(temp1);
+            temp1.X = 1f;
+            temp1.Duration = 0.3;
+            temp1.RelativeTo = Fuse.TranslationModes.Size;
+            temp2.Animators.Add(temp3);
+            temp3.X = -1f;
+            temp3.Duration = 0.3;
+            temp3.RelativeTo = Fuse.TranslationModes.Size;
+            temp4.Animators.Add(temp5);
+            temp5.X = 1f;
+            temp5.Duration = 0.3;
+            temp5.RelativeTo = Fuse.TranslationModes.Size;
+            __self.Children.Add(temp);
+            __self.Children.Add(temp2);
+            __self.Children.Add(temp4);
+            return __self;
+        }
+        static global::Uno.UX.Selector __selector0 = "Main";
+    }
     [global::Uno.UX.UXGlobalResource("MontserratBlack")] public static readonly Fuse.Font MontserratBlack;
     [global::Uno.UX.UXGlobalResource("MontserratBold")] public static readonly Fuse.Font MontserratBold;
     [global::Uno.UX.UXGlobalResource("MontserratExtraBold")] public static readonly Fuse.Font MontserratExtraBold;
@@ -12,15 +140,9 @@ public partial class MainView: Fuse.App
     [global::Uno.UX.UXGlobalResource("MontserratMedium")] public static readonly Fuse.Font MontserratMedium;
     [global::Uno.UX.UXGlobalResource("MontserratRegular")] public static readonly Fuse.Font MontserratRegular;
     internal global::Fuse.Navigation.Router router;
-    internal global::Fuse.Controls.Page SignInPage;
-    internal global::Fuse.Controls.Page SignUpPage;
-    internal global::Fuse.Controls.Page MainPage;
     global::Uno.UX.NameTable __g_nametable;
     static string[] __g_static_nametable = new string[] {
-        "router",
-        "SignInPage",
-        "SignUpPage",
-        "MainPage"
+        "router"
     };
     static MainView()
     {
@@ -166,71 +288,52 @@ public partial class MainView: Fuse.App
     }
     void InitializeUX()
     {
-        var temp1 = new global::Fuse.Reactive.FuseJS.DiagnosticsImplModule();
-        var temp2 = new global::Fuse.Reactive.FuseJS.Http();
-        var temp3 = new global::Fuse.Reactive.FuseJS.TimerModule();
-        var temp4 = new global::Fuse.Drawing.BrushConverter();
-        var temp5 = new global::Fuse.Triggers.BusyTaskModule();
-        var temp6 = new global::Fuse.Testing.UnoTestingHelper();
-        var temp7 = new global::Fuse.FileSystem.FileSystemModule();
-        var temp8 = new global::Fuse.Storage.StorageModule();
-        var temp9 = new global::Fuse.WebSocket.WebSocketClientModule();
-        var temp10 = new global::Polyfills.Window.WindowModule();
-        var temp11 = new global::FuseJS.Globals();
-        var temp12 = new global::FuseJS.Lifecycle();
-        var temp13 = new global::FuseJS.Environment();
-        var temp14 = new global::FuseJS.Base64();
-        var temp15 = new global::FuseJS.Bundle();
-        var temp16 = new global::FuseJS.FileReaderImpl();
-        var temp17 = new global::FuseJS.UserEvents();
-        var temp = new global::Fuse.Controls.PageControl();
-        temp_Active_inst = new FuseSample_FuseControlsNavigationControl_Active_Property(temp, __selector0);
-        var temp18 = new global::Fuse.Reactive.Data("active");
+        var temp = new global::Fuse.Reactive.FuseJS.DiagnosticsImplModule();
+        var temp1 = new global::Fuse.Reactive.FuseJS.Http();
+        var temp2 = new global::Fuse.Reactive.FuseJS.TimerModule();
+        var temp3 = new global::Fuse.Drawing.BrushConverter();
+        var temp4 = new global::Fuse.Triggers.BusyTaskModule();
+        var temp5 = new global::Fuse.Testing.UnoTestingHelper();
+        var temp6 = new global::Fuse.FileSystem.FileSystemModule();
+        var temp7 = new global::Fuse.Storage.StorageModule();
+        var temp8 = new global::Fuse.WebSocket.WebSocketClientModule();
+        var temp9 = new global::Polyfills.Window.WindowModule();
+        var temp10 = new global::FuseJS.Globals();
+        var temp11 = new global::FuseJS.Lifecycle();
+        var temp12 = new global::FuseJS.Environment();
+        var temp13 = new global::FuseJS.Base64();
+        var temp14 = new global::FuseJS.Bundle();
+        var temp15 = new global::FuseJS.FileReaderImpl();
+        var temp16 = new global::FuseJS.UserEvents();
         __g_nametable = new global::Uno.UX.NameTable(null, __g_static_nametable);
-        var temp19 = new global::Fuse.iOS.StatusBarConfig();
-        var temp20 = new global::Fuse.Android.StatusBarConfig();
+        var temp17 = new global::Fuse.iOS.StatusBarConfig();
+        var temp18 = new global::Fuse.Android.StatusBarConfig();
         router = new global::Fuse.Navigation.Router();
-        SignInPage = new global::Fuse.Controls.Page();
-        var temp21 = new global::SignInPage();
-        SignUpPage = new global::Fuse.Controls.Page();
-        var temp22 = new global::SignUpPage();
-        MainPage = new global::Fuse.Controls.Page();
-        var temp23 = new global::MainPage();
-        var temp24 = new global::Fuse.Reactive.DataBinding(temp_Active_inst, temp18, Fuse.Reactive.BindingMode.Default);
-        var temp25 = new global::Fuse.Reactive.JavaScript(__g_nametable);
+        var temp19 = new global::Fuse.Controls.Navigator();
+        var SignIn = new Template(this, this);
+        var SignUp = new Template1(this, this);
+        var Main = new Template2(this, this);
+        var temp20 = new global::Fuse.Reactive.JavaScript(__g_nametable);
         this.Background = float4(0.9333333f, 0.9333333f, 0.9333333f, 1f);
-        temp19.IsVisible = true;
-        temp19.Style = Fuse.Platform.StatusBarStyle.Light;
-        temp19.Animation = Fuse.Platform.StatusBarAnimation.Slide;
-        temp20.Color = float4(1f, 1f, 1f, 0f);
-        router.Name = __selector1;
-        temp.Children.Add(SignInPage);
-        temp.Children.Add(SignUpPage);
-        temp.Children.Add(MainPage);
-        temp.Bindings.Add(temp24);
-        SignInPage.Name = __selector2;
-        SignInPage.Children.Add(temp21);
-        SignUpPage.Name = __selector3;
-        SignUpPage.Children.Add(temp22);
-        MainPage.Name = __selector4;
-        MainPage.Children.Add(temp23);
-        temp25.Code = "\n\tmodule.exports = {\n\t\topenSignInPage: function() { router.goto(\"SignInPage\"); },\n\t\topenSignUpPage: function() { router.goto(\"SignUpPage\"); },\n\t\topenMainPage: function() { router.goto(\"MainPage\"); }\n\t};\n\t";
-        temp25.LineNumber = 30;
-        temp25.FileName = "MainView.ux";
+        temp17.IsVisible = true;
+        temp17.Style = Fuse.Platform.StatusBarStyle.Light;
+        temp17.Animation = Fuse.Platform.StatusBarAnimation.Slide;
+        temp18.Color = float4(1f, 1f, 1f, 0f);
+        router.Name = __selector0;
+        temp19.DefaultPath = "SignIn";
+        temp19.Templates.Add(SignIn);
+        temp19.Templates.Add(SignUp);
+        temp19.Templates.Add(Main);
+        temp20.Code = "\n\tmodule.exports = {\n\t\topenSignInPage: function() { router.goBack(); },\n\t\topenSignUpPage: function() { router.push(\"SignUp\"); },\n\t\topenMainPage: function() { router.goto(\"Main\"); }\n\t};\n\t";
+        temp20.LineNumber = 54;
+        temp20.FileName = "MainView.ux";
         __g_nametable.This = this;
         __g_nametable.Objects.Add(router);
-        __g_nametable.Objects.Add(SignInPage);
-        __g_nametable.Objects.Add(SignUpPage);
-        __g_nametable.Objects.Add(MainPage);
+        this.Children.Add(temp17);
+        this.Children.Add(temp18);
+        this.Children.Add(router);
         this.Children.Add(temp19);
         this.Children.Add(temp20);
-        this.Children.Add(router);
-        this.Children.Add(temp);
-        this.Children.Add(temp25);
     }
-    static global::Uno.UX.Selector __selector0 = "Active";
-    static global::Uno.UX.Selector __selector1 = "router";
-    static global::Uno.UX.Selector __selector2 = "SignInPage";
-    static global::Uno.UX.Selector __selector3 = "SignUpPage";
-    static global::Uno.UX.Selector __selector4 = "MainPage";
+    static global::Uno.UX.Selector __selector0 = "router";
 }

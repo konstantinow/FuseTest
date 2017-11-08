@@ -1,57 +1,64 @@
-<Panel ux:Class="SignInPage">
-	<StackPanel>
-		<Panel Margin="0,60,0,0">
-			<Image File="Assets/Images/logo.png" Width="60%" Alignment="Center" />
-		</Panel>
-		<StackPanel Margin="0,90,0,0" Orientation="Horizontal" Alignment="Center">
-			<Image File="Assets/Images/facebook_logo.png" Width="24" Height="24" Margin="0,0,16,0" />
-			<Text Color="White" FontSize="17" Font="MontserratMedium">Sign in with Facebook</Text>
+<Page ux:Class="SignInPage">
+	<Router ux:Dependency="router" />
+
+	<Panel>
+		<StackPanel>
+			<Panel Margin="0,60,0,0">
+				<Image File="Assets/Images/logo.png" Width="60%" Alignment="Center" />
+			</Panel>
+			<StackPanel Margin="0,90,0,0" Orientation="Horizontal" Alignment="Center">
+				<Image File="Assets/Images/facebook_logo.png" Width="24" Height="24" Margin="0,0,16,0" />
+				<Text Color="White" FontSize="17" Font="MontserratMedium">Sign in with Facebook</Text>
+			</StackPanel>
+
+			<StackPanel Margin="0,20,0,0">
+				<Text Color="White" Width="10%" FontSize="12" Font="MontserratRegular">OR</Text>
+			</StackPanel>
+
+			<StackPanel Margin="15,20,15,0" Alignment="Center" Width="100%" Height="90" Color="White">
+				<KMEdit Margin="15,0,0,0" Height="44.5" PlaceholderText="E-mail" InputHint="Email" />
+				<Rectangle Color="Silver" Height="1" />
+				<DockPanel>
+					<KMEdit ux:Name="password" Margin="15,0,0,0" Dock="Left" Width="80%" Height="44.5" PlaceholderText="Password" IsPassword="true" />
+					<Image ux:Name="passImage" Dock="Right" Margin="10,0,10,0" Width="20" File="Assets/Images/eye_show.png" Clicked="{showPass}">
+						<Clicked>
+							<Rotate DegreesY="90" Duration="0.1" />
+						</Clicked>
+					</Image>
+				</DockPanel>
+			</StackPanel>
+
+			<KMButton Margin="15,20,15,0" Width="100%" Height="50" Text="Sign In">
+				<Clicked>
+					<Callback Delay="0.1" Handler="{openMainPage}"/>
+				</Clicked>
+			</KMButton>
+
+			<Text Margin="0,5,0,0" Color="White" FontSize="13" Font="MontserratMedium" Alignment="Center" Clicked="{openMainPage}">Forgot your password?</Text>
+			<StackPanel Margin="0,15,0,0" Orientation="Horizontal" Alignment="Center" Dock="Bottom">
+				<Text Color="White" FontSize="15" Font="MontserratMedium" Clicked="{openSignUpPage}" >Don't have an account?</Text>
+				<Text Color="White" FontSize="15" Font="MontserratSemiBold" Clicked="{openSignUpPage}" > Sign up</Text>
+			</StackPanel>
 		</StackPanel>
+		<Image File="Assets/Images/background.png" />
+		<JavaScript>
+		var Observable = require('FuseJS/Observable');
+		var isTextPassword = Observable(true);
 
-		<StackPanel Margin="0,20,0,0">
-			<Text Color="White" Width="10%" FontSize="12" Font="MontserratRegular">OR</Text>
-		</StackPanel>
-
-		<StackPanel Margin="15,20,15,0" Alignment="Center" Width="100%" Height="90" Color="White">
-			<KMEdit Margin="15,0,0,0" Height="44.5" PlaceholderText="E-mail" InputHint="Email" />
-			<Rectangle Color="Silver" Height="1" />
-			<DockPanel>
-				<KMEdit Margin="15,0,0,0" Dock="Left" Width="80%" Height="44.5" PlaceholderText="Password" IsPassword="{isTextPassword}" />
-				<Image ux:Name="passImage" Dock="Right" Margin="10,0,10,0" Width="20" File="{passImageFile}" Clicked="{showPass}">
-					<Clicked>
-						<Rotate DegreesY="90" Duration="0.1" />
-					</Clicked>
-				</Image>
-			</DockPanel>
-		</StackPanel>
-
-		<KMButton Margin="15,20,15,0" Width="100%" Height="50" Text="Sign In"/>
-
-		<Text Margin="0,5,0,0" Color="White" FontSize="13" Font="MontserratMedium" Alignment="Center">Forgot your password?</Text>
-		<StackPanel Margin="0,15,0,0" Orientation="Horizontal" Alignment="Center" Dock="Bottom">
-			<Text Color="White" FontSize="15" Font="MontserratMedium" Clicked="{openSignUpPage}" >Don't have an account?</Text>
-			<Text Color="White" FontSize="15" Font="MontserratSemiBold" Clicked="{openSignUpPage}" > Sign up</Text>
-		</StackPanel>
-	</StackPanel>
-	<Image File="Assets/Images/background.png" />
-	<JavaScript>
-	var Observable = require('FuseJS/Observable');
-	var isTextPassword = Observable(true);
-	var passImageFile = Observable('Assets/Images/eye_show.png')
-
-	function showPass(){
-		isTextPassword.value = !IsPassword.value;
-		if (isTextPassword.value) {
-			passImageFile.value = 'Assets/Images/eye.png'
-		} else {
-			passImageFile.value = 'Assets/Images/eye_show.png'
+		function showPass(){
+			isTextPassword.value = !IsPassword.value;
+			if (isTextPassword.value) {
+				passImageFile = 'Assets/Images/eye.png'
+			} else {
+				passImageFile = 'Assets/Images/eye_show.png'
+			}
 		}
-	}
 
-	module.exports = {
-		isTextPassword: isTextPassword,
-		showPass: showPass,
-		passImageFile: passImageFile
-	}
-	</JavaScript>
-</Panel>
+		module.exports = {
+			isTextPassword: isTextPassword,
+			showPass: showPass,
+			passImageFile: passImageFile
+		}
+		</JavaScript>
+	</Panel>
+</Page>

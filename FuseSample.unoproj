@@ -7,7 +7,8 @@
   "Includes": [
     "./*.ux",
     "./*.uno",
-    "./*.uxl"
+    "./*.uxl",
+    "./*.js:Bundle"
   ],
   "Projects": [
     "fuse_modules\\bolav\\fuse-usersettings\\usersettings_include.unoproj"

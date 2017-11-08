@@ -1,7 +1,7 @@
 var observable = require('FuseJS/Observable')
 var isTextPassword = observable(true)
 var passImageFile = observable('Assets/Images/eye_show.png')
-var serverAPI = require('ServerAPI')
+var serverAPI = require('./s')
 var settings = observable('UserSettings');
 
 var BASE_URL = "http://kmdev.us-west-2.elasticbeanstalk.com/"
@@ -9,11 +9,11 @@ var SIGNIN_URL = "api/users/authorization"
 
 function signInClick() {
 	serverAPI.signIn('a@a.a', '86f7e437faa5a7fce15d1ddcb9eaeaea377667b8', false, function(err, jsonObj) {
-		console.log(jsonObj['id'])
-		console.log(jsonObj['nickname'])
-		console.log(jsonObj['email'])
-		console.log(jsonObj['isFB'])
-		console.log(jsonObj['cookie'])
+		console.log("id: " + jsonObj['id'])
+		console.log("nickname: " + jsonObj['nickname'])
+		console.log("email: " + jsonObj['email'])
+		console.log("isFB: " + jsonObj['isFB'])
+		console.log("cookie: " + jsonObj['cookie'])
 	})
 }
 

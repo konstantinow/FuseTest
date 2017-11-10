@@ -1,27 +1,26 @@
 <Page ux:Class="SignUpPage">
 	<Router ux:Dependency="router" />
-	
-	<JavaScript File="../R.js"/>
+
+	<JavaScript File="../SignUpPage.js" />
 
 	<Panel>
-		<JavaScript File="../SignUpPage.js" />
 		<StackPanel>
 			<Panel Margin="0,60,0,0">
 				<Circle Width="30" Height="30" Margin="110,110,0,0">
-					<Image File="{imageCircleAdd}" />
+					<Image File="{R.imageCircleAdd}" />
 				</Circle>
 				<Circle Width="140" Height="140">
-					<ImageFill File="{imageNoAvatar}" />
+					<ImageFill File="{R.imageNoAvatar}" />
 				</Circle>
 			</Panel>
 
 			<StackPanel Margin="15,50,15,0" Alignment="Center" Width="100%" Height="100%" Color="White">
-				<KMEdit Margin="15,0,0,0" Height="44.5" PlaceholderText="Username"/>
+				<KMEdit Margin="15,0,0,0" Height="44.5" PlaceholderText="Username" Value="{usernameText}"/>
 				<Rectangle Color="Silver" Height="1"/>
-				<KMEdit Margin="15,0,0,0" Height="44.5" PlaceholderText="E-mail"/>
+				<KMEdit Margin="15,0,0,0" Height="44.5" PlaceholderText="E-mail" Value="{emailText}"/>
 				<Rectangle Color="Silver" Height="1"/>
 				<DockPanel>
-					<KMEdit Margin="15,0,0,0" Dock="Left" Height="44.5" PlaceholderText="Password" IsPassword="true"/>
+					<KMEdit Margin="15,0,0,0" Dock="Left" Height="44.5" PlaceholderText="Password" IsPassword="true" Value="{passwordText}"/>
 					<Image Dock="Right" Margin="10,0,10,0" Width="20" File="{imageEye}">
 						<Clicked>
 							<Rotate DegreesY="90" Duration="0.1"/>
@@ -30,7 +29,7 @@
 				</DockPanel>
 				<Rectangle Color="Silver" Height="1"/>
 				<DockPanel>
-					<KMEdit Margin="15,0,0,0" Dock="Left" Height="44.5" PlaceholderText="Confirm password" IsPassword="true"/>
+					<KMEdit Margin="15,0,0,0" Dock="Left" Height="44.5" PlaceholderText="Confirm password" IsPassword="true" Value="{confirmPasswordText}"/>
 					<Image Dock="Right" Margin="10,0,10,0" Width="20" File="{imageEye}">
 						<Clicked>
 							<Rotate DegreesY="90" Duration="0.1"/>

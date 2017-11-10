@@ -1,0 +1,9 @@
+<ux:Resources>
+	<string ux:Global='R.imageMainBG' ux:Value='../Assets/Images/background.png'/>
+	<string ux:Global='R.imageEye' ux:Value='../Assets/Images/eye.png'/>
+	<string ux:Global='R.imageEyeShow' ux:Value='../Assets/Images/eye_show.png'/>
+	<string ux:Global='R.imageFB' ux:Value='../Assets/Images/facebook_logo.png'/>
+	<string ux:Global='R.imageLogo' ux:Value='../Assets/Images/logo.png'/>
+	<string ux:Global='R.imageNoAvatar' ux:Value='../Assets/Images/no_avatar_circle.png'/>
+	<string ux:Global='R.imageCircleAdd' ux:Value='../Assets/Images/circle_add.png'/>
+</ux:Resources>

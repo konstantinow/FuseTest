@@ -1,8 +1,6 @@
 <Page ux:Class="MainPage">
 	<Router ux:Dependency="router" />
 	
-	<JavaScript File="../R.js"/>
-
 	<Panel>
 
 		<Image File="{imageMainBG}"/>

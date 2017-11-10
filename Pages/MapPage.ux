@@ -1,8 +1,6 @@
 <Page ux:Class="MapPage">
 	<Router ux:Dependency="router" />
-	
-	<JavaScript File="../R.js"/>
-	
+
 	<double ux:Property="Latitude"/>
 	<double ux:Property="Longitude"/>
 	<NativeViewHost>

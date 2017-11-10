@@ -1,13 +1,15 @@
 <Page ux:Class="SignInPage">
 	<Router ux:Dependency="router" />
 	
-	<JavaScript File="../R.js"/>
 	<JavaScript File="../SignInPage.js" />
 
 	<Panel>
-		<StackPanel>
+	<StackPanel>
 			<Panel Margin="0,60,0,0">
 				<Image File="{R.imageLogo}" Width="60%" Alignment="Center" />
+				<JavaScript>
+					console.log(Z)
+				</JavaScript>
 			</Panel>
 			<StackPanel Margin="0,90,0,0" Orientation="Horizontal" Alignment="Center">
 				<Image File="{R.imageFB}" Width="24" Height="24" Margin="0,0,16,0" />
@@ -19,10 +21,10 @@
 			</StackPanel>
 
 			<StackPanel Margin="15,20,15,0" Alignment="Center" Width="100%" Height="90" Color="White">
-				<KMEdit Margin="15,0,0,0" Height="44.5" PlaceholderText="E-mail" InputHint="Email" Value="{email}" />
+				<KMEdit Margin="15,0,0,0" Height="44.5" PlaceholderText="E-mail" InputHint="Email" Value="{emailText}" />
 				<Rectangle Color="Silver" Height="1" />
 				<DockPanel>
-					<KMEdit ux:Name="password" Margin="15,0,0,0" Dock="Left" Width="80%" Height="44.5" PlaceholderText="Password" IsPassword="true" />
+					<KMEdit ux:Name="password" Margin="15,0,0,0" Dock="Left" Width="80%" Height="44.5" PlaceholderText="Password" IsPassword="true" Value="{passwordText}"/>
 					<Image ux:Name="passImage" Dock="Right" Margin="10,0,10,0" Width="20" File="{R.imageEyeShow}" Clicked="{showPass}">
 						<Clicked>
 							<Rotate DegreesY="90" Duration="0.1" />
@@ -44,6 +46,5 @@
 			</StackPanel>
 		</StackPanel>
 		<Image File="{R.imageMainBG}" />
-		<JavaScript>console.log(imageMainBG)</JavaScript>
 	</Panel>
 </Page>

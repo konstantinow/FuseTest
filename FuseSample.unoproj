@@ -1,11 +1,14 @@
 {
   "RootNamespace": "",
   "Packages": [
+    "Fuse.Maps",
     "Fuse",
     "FuseJS"
   ],
   "Includes": [
     "./*.ux",
+    "./Pages/*.ux",
+    "./Components/*.ux",
     "./*.uno",
     "./*.uxl",
     "./*.js:Bundle"

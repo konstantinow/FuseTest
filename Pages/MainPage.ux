@@ -1,8 +1,10 @@
 <Page ux:Class="MainPage">
 	<Router ux:Dependency="router" />
+	
+	<JavaScript File="../R.js"/>
 
 	<Panel>
 
-		<Image File="Assets/Images/background.png"/>
+		<Image File="{imageMainBG}"/>
 	</Panel>
 </Page>

@@ -1,14 +1,16 @@
 <Page ux:Class="SignUpPage">
 	<Router ux:Dependency="router" />
 	
+	<JavaScript File="../R.js"/>
+
 	<Panel>
 		<StackPanel>
 			<Panel Margin="0,60,0,0">
 				<Circle Width="30" Height="30" Margin="110,110,0,0">
-					<Image File="assets/images/circle_add.png" />
+					<Image File="{imageCircleAdd}" />
 				</Circle>
 				<Circle Width="140" Height="140">
-					<ImageFill File="assets/images/no_avatar_circle.png" />
+					<ImageFill File="{imageNoAvatar}" />
 				</Circle>
 			</Panel>
 
@@ -20,7 +22,7 @@
 				<Rectangle Color="Silver" Height="1"/>
 				<DockPanel>
 					<KMEdit Margin="15,0,0,0" Dock="Left" Height="44.5" PlaceholderText="Password" IsPassword="true"/>
-					<Image Dock="Right" Margin="10,0,10,0" Width="20" File="Assets/Images/eye.png">
+					<Image Dock="Right" Margin="10,0,10,0" Width="20" File="{imageEye}">
 						<Clicked>
 							<Rotate DegreesY="90" Duration="0.1"/>
 						</Clicked>
@@ -29,7 +31,7 @@
 				<Rectangle Color="Silver" Height="1"/>
 				<DockPanel>
 					<KMEdit Margin="15,0,0,0" Dock="Left" Height="44.5" PlaceholderText="Confirm password" IsPassword="true"/>
-					<Image Dock="Right" Margin="10,0,10,0" Width="20" File="Assets/Images/eye.png">
+					<Image Dock="Right" Margin="10,0,10,0" Width="20" File="{imageEye}">
 						<Clicked>
 							<Rotate DegreesY="90" Duration="0.1"/>
 						</Clicked>
@@ -46,6 +48,6 @@
 			</StackPanel>
 
 		</StackPanel>
-		<Image File="Assets/Images/background.png" />
+		<Image File="{imageMainBG}" />
 	</Panel>
 </Page>

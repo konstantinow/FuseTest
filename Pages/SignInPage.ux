@@ -1,16 +1,15 @@
 <Page ux:Class="SignInPage">
 	<Router ux:Dependency="router" />
-	
-	<JavaScript File="../R.js"/>
+
 	<JavaScript File="../SignInPage.js" />
 
 	<Panel>
 		<StackPanel>
 			<Panel Margin="0,60,0,0">
-				<Image File="{R.imageLogo}" Width="60%" Alignment="Center" />
+				<Image File="../Assets/Images/logo.png" Width="60%" Alignment="Center" />
 			</Panel>
 			<StackPanel Margin="0,90,0,0" Orientation="Horizontal" Alignment="Center">
-				<Image File="{R.imageFB}" Width="24" Height="24" Margin="0,0,16,0" />
+				<Image File="../Assets/Images/facebook_logo.png" Width="24" Height="24" Margin="0,0,16,0" />
 				<Text Color="White" FontSize="17" Font="MontserratMedium">Sign in with Facebook</Text>
 			</StackPanel>
 
@@ -23,7 +22,7 @@
 				<Rectangle Color="Silver" Height="1" />
 				<DockPanel>
 					<KMEdit ux:Name="password" Margin="15,0,0,0" Dock="Left" Width="80%" Height="44.5" PlaceholderText="Password" IsPassword="true" />
-					<Image ux:Name="passImage" Dock="Right" Margin="10,0,10,0" Width="20" File="{R.imageEyeShow}" Clicked="{showPass}">
+					<Image ux:Name="passImage" Dock="Right" Margin="10,0,10,0" Width="20" File="../Assets/Images/eye_show.png" Clicked="{showPass}">
 						<Clicked>
 							<Rotate DegreesY="90" Duration="0.1" />
 						</Clicked>
@@ -33,17 +32,17 @@
 
 			<KMButton Margin="15,20,15,0" Width="100%" Height="50" Text="Sign In">
 				<Clicked>
-					<Callback Delay="0.1" Handler="{signInClick}"/>
+					<Callback Delay="0.1" Handler="{signInClick}" />
 				</Clicked>
 			</KMButton>
 
 			<Text Margin="0,5,0,0" Color="White" FontSize="13" Font="MontserratMedium" Alignment="Center" Clicked="{openMainPage}">Forgot your password?</Text>
 			<StackPanel Margin="0,15,0,0" Orientation="Horizontal" Alignment="Center" Dock="Bottom">
-				<Text Color="White" FontSize="15" Font="MontserratMedium" Clicked="{openSignUpPage}" >Don't have an account?</Text>
-				<Text Color="White" FontSize="15" Font="MontserratSemiBold" Clicked="{openSignUpPage}" > Sign up</Text>
+				<Text Color="White" FontSize="15" Font="MontserratMedium" Clicked="{openSignUpPage}">Don't have an account?</Text>
+				<Text Color="White" FontSize="15" Font="MontserratSemiBold" Clicked="{openSignUpPage}"> Sign up</Text>
 			</StackPanel>
 		</StackPanel>
-		<Image File="{R.imageMainBG}" />
-		<JavaScript>console.log(imageMainBG)</JavaScript>
+		<Image File="../Assets/Images/background.png" />
+		<JavaScript>console.log(R.imageMainBG)</JavaScript>
 	</Panel>
 </Page>

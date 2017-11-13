@@ -1,10 +1,13 @@
 <Page ux:Class="MainPage">
 	<Router ux:Dependency="router" />
-	
-	<JavaScript File="../R.js"/>
 
-	<Panel>
+	<StackPanel>
 
-		<Image File="{imageMainBG}"/>
-	</Panel>
+		<Image Height="44" File="../Assets/Images/background.png"/>
+
+		<Panel>
+
+
+		</Panel>
+	</StackPanel>
 </Page>

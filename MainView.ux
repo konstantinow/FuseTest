@@ -38,7 +38,7 @@
 				<Move X="-1" RelativeTo="Size" Duration="0.3"/>
 			</RemovingAnimation>
 		</SignUpPage>
-		<MapPage ux:Template="Main" router="router" Transition="None">
+		<MainPage ux:Template="Main" router="router" Transition="None">
 			<EnteringAnimation>
 				<Move X="1" RelativeTo="Size" Duration="0.3"/>
 			</EnteringAnimation>
@@ -48,7 +48,7 @@
 			<RemovingAnimation>
 				<Move X="1" RelativeTo="Size" Duration="0.3"/>
 			</RemovingAnimation>
-		</MapPage>
+		</MainPage>
 	</Navigator>
 
 	<JavaScript>

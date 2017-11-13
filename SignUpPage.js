@@ -1,9 +1,13 @@
-var observable = require('FuseJS/Observable')
+var Observable = require('FuseJS/Observable')
 var serverAPI = require('./ServerAPI')
 
+var usernameText = Observable("")
+var emailText = Observable("")
+var passwordText = Observable("")
+var confirmPasswordText = Observable("")
+
 function signUpClick() {
-	console.log('click')
-	serverAPI.signUp('b', 'b@b.b', 'b', false, function(err, jsonObj) {
+	serverAPI.signUp(usernameText.value, emailText.value, passwordText.value, false, function(err, jsonObj) {
 		console.log("id: " + jsonObj['id'])
 		console.log("nickname: " + jsonObj['nickname'])
 		console.log("email: " + jsonObj['email'])
@@ -14,4 +18,8 @@ function signUpClick() {
 
 module.exports = {
 	signUpClick: signUpClick,
+	usernameText: usernameText,
+	emailText: emailText,
+	passwordText: passwordText,
+	confirmPasswordText: confirmPasswordText,
 }

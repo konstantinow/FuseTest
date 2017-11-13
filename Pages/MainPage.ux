@@ -3,11 +3,9 @@
 
 	<StackPanel>
 
-		<Image Height="44" File="../Assets/Images/background.png"/>
-
 		<Panel>
-
-
+			<Image Height="44" File="../Assets/Images/background.png"/>
 		</Panel>
+
 	</StackPanel>
 </Page>

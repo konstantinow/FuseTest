@@ -1,14 +1,13 @@
-var observable = require('FuseJS/Observable')
-var isTextPassword = observable(true)
-var passImageFile = observable('Assets/Images/eye_show.png')
+var Observable = require('FuseJS/Observable')
+var isTextPassword = Observable(true)
+var passImageFile = Observable('Assets/Images/eye_show.png')
 var serverAPI = require('./ServerAPI')
 
-function a() {
-	console.log('click')
-}
+var emailText = Observable("")
+var passwordText = Observable("")
 
 function signInClick() {
-	serverAPI.signIn('a@a.a', '86f7e437faa5a7fce15d1ddcb9eaeaea377667b8', false, function(err, jsonObj) {
+	serverAPI.signIn(emailText.value, passwordText.value, false, function(err, jsonObj) {
 		console.log("id: " + jsonObj['id'])
 		console.log("nickname: " + jsonObj['nickname'])
 		console.log("email: " + jsonObj['email'])
@@ -27,7 +26,8 @@ function showPass() {
 }
 
 module.exports = {
-	a: a,
+	emailText: emailText,
+	passwordText: passwordText,
 	signInClick: signInClick,
 	isTextPassword: isTextPassword,
 	showPass: showPass,

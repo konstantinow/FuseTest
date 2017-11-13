@@ -1,6 +1,6 @@
 <Page ux:Class="SignInPage">
 	<Router ux:Dependency="router" />
-
+	
 	<JavaScript File="../SignInPage.js" />
 
 	<Panel>
@@ -18,7 +18,7 @@
 			</StackPanel>
 
 			<StackPanel Margin="15,20,15,0" Alignment="Center" Width="100%" Height="90" Color="White">
-				<KMEdit Margin="15,0,0,0" Height="44.5" PlaceholderText="E-mail" InputHint="Email" Value="{email}" />
+				<KMEdit Margin="15,0,0,0" Height="44.5" PlaceholderText="E-mail" InputHint="Email" Value="{emailText}" />
 				<Rectangle Color="Silver" Height="1" />
 				<DockPanel>
 					<KMEdit ux:Name="password" Margin="15,0,0,0" Dock="Left" Width="80%" Height="44.5" PlaceholderText="Password" IsPassword="true" />
@@ -43,6 +43,5 @@
 			</StackPanel>
 		</StackPanel>
 		<Image File="../Assets/Images/background.png" />
-		<JavaScript>console.log(R.imageMainBG)</JavaScript>
 	</Panel>
 </Page>

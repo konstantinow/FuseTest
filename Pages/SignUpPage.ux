@@ -1,8 +1,9 @@
 <Page ux:Class="SignUpPage">
 	<Router ux:Dependency="router" />
 
+	<JavaScript File="../SignUpPage.js" />
+
 	<Panel>
-		<JavaScript File="../SignUpPage.js" />
 		<StackPanel>
 			<Panel Margin="0,60,0,0">
 				<Circle Width="30" Height="30" Margin="110,110,0,0">
